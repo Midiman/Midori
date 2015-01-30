@@ -23,7 +23,7 @@ class Game
 		int		GetHalfHeight();
 		
 		void	OnError(int error, const char* desc);
-		void	OnKeypress(GLFWwindow* window, int key, int scancode, int action, int mods);
+		static void	OnKeypress(GLFWwindow* window, int key, int scancode, int action, int mods);
 		
 	private:
 		int		m_iWidth, m_iHeight;

@@ -14,15 +14,15 @@ RCOMPILE_FLAGS = -D NDEBUG
 # Additional debug-specific flags
 DCOMPILE_FLAGS = -D DEBUG
 # Add additional include paths
-INCLUDES = -I $(SRC_PATH)/include
+INCLUDES = -Iinclude/
 # General linker settings
-LINK_FLAGS = 
+LINK_FLAGS = `pkg-config --static --libs glfw3`
 # Additional release-specific linker settings
 RLINK_FLAGS = 
 # Additional debug-specific linker settings
 DLINK_FLAGS = 
 # Destination directory, like a jail or mounted system
-DESTDIR = /
+DESTDIR = bin/
 # Install path (bin/ is appended automatically)
 INSTALL_PREFIX = usr/local
 #### END PROJECT SETTINGS ####
